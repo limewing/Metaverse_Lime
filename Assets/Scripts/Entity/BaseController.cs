@@ -16,7 +16,7 @@ public class BaseController : MonoBehaviour
     protected Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get { return movementDirection; } }
 
-    protected Vector2 lookDirection = Vector2.right;
+    protected Vector2 lookDirection = Vector2.down;
 
     protected AnimationHandler animationHandler;
 
@@ -24,6 +24,9 @@ public class BaseController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         animationHandler = GetComponent<AnimationHandler>();
+
+        if (animationHandler == null)
+            Debug.Log("AnimationHandler is not exist");
     }
 
     protected virtual void Start()
@@ -34,12 +37,12 @@ public class BaseController : MonoBehaviour
     protected virtual void Update()
     {
         HandleAction();
-        Rotate(lookDirection);
     }
 
     protected virtual void FixedUpdate()
     {
         Movement(movementDirection);
+        Rotate(lookDirection);
     }
 
     protected virtual void HandleAction()
@@ -61,32 +64,43 @@ public class BaseController : MonoBehaviour
 
     private void Rotate(Vector2 direction)
     {
-        if (direction == Vector2.zero)  return;
+        if (direction == Vector2.zero) return;
 
-        float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; //  보고있는 각도
+        float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // 왼쪽은 오른쪽 flip시켜서 사용할거임
         rightSprite.SetActive(false);
         upSprite.SetActive(false);
         downSprite.SetActive(false);
+
+        Animator selectedAnimator = null;
 
         if (Mathf.Abs(rotZ) <= 45f) // 오른쪽
         {
             rightSprite.SetActive(true);
             rightSprite.GetComponent<SpriteRenderer>().flipX = false;
+            selectedAnimator = rightSprite.GetComponent<Animator>();
         }
         else if (Mathf.Abs(rotZ) > 135f) // 왼쪽
         {
             rightSprite.SetActive(true);
             rightSprite.GetComponent<SpriteRenderer>().flipX = true;
+            selectedAnimator = rightSprite.GetComponent<Animator>();
         }
         else if (rotZ > 45f && rotZ < 135f) // 위쪽
         {
             upSprite.SetActive(true);
+            selectedAnimator = upSprite.GetComponent<Animator>();
         }
         else if (rotZ < -45f && rotZ > -135f) // 아래쪽
         {
             downSprite.SetActive(true);
+            selectedAnimator = downSprite.GetComponent<Animator>();
+        }
+
+        
+        if (animationHandler.currentAnimator != selectedAnimator) // 같은 애니메이터일 경우 불필요한 호출 방지
+        {
+            animationHandler.SetAnimator(selectedAnimator);
         }
 
         if (accessoryPivot != null)

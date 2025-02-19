@@ -3954,6 +3954,7 @@ GameObject:
   - component: {fileID: 1841971883}
   - component: {fileID: 1841971882}
   - component: {fileID: 1841971885}
+  - component: {fileID: 1841971886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4069,6 +4070,21 @@ MonoBehaviour:
   rightSprite: {fileID: 1626111288}
   upSprite: {fileID: 1265295877}
   downSprite: {fileID: 2093870989}
+--- !u!114 &1841971886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841971881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ac2b8ad27542040b939d9cfe239d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightAnimator: {fileID: 1626111291}
+  upAnimator: {fileID: 1265295880}
+  downAnimator: {fileID: 2093870992}
 --- !u!1 &2046014868
 GameObject:
   m_ObjectHideFlags: 0
