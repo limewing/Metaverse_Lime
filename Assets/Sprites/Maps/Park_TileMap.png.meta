@@ -1732,7 +1732,7 @@ TextureImporter:
         width: 35
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1753,7 +1753,7 @@ TextureImporter:
         width: 62
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1774,7 +1774,7 @@ TextureImporter:
         width: 51
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1795,7 +1795,7 @@ TextureImporter:
         width: 92
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1816,7 +1816,7 @@ TextureImporter:
         width: 16
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1837,7 +1837,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1858,7 +1858,7 @@ TextureImporter:
         width: 16
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1879,7 +1879,7 @@ TextureImporter:
         width: 22
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1887,6 +1887,174 @@ TextureImporter:
       bones: []
       spriteID: 5fadaaa699aae1542bfa8a65ff7c4d86
       internalID: -1533026995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_2
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 415
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad88d7aab63f8f41b187e2e9dad681b
+      internalID: 1328775338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 447
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05b4cf4d6c0b1c40a879c627753d846
+      internalID: -1965141751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_3
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 447
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf02a0581c4cb745a49bf5dcea8f5de
+      internalID: 1146417831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_4
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 415
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0bbd326ad0c5042b902de9ddaf9f6e
+      internalID: 336279584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_5
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 511
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8b843649f3b4f4ab9ed40c1046c44b
+      internalID: -2091710271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_6
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 511
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6014dcd4c049ce4085192d3de23651d
+      internalID: -792247282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_7
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 480
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e320765896268454eb9daf3c92cc8a79
+      internalID: -1811709520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Park_TileMap_ChairHalf_8
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 480
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793a856a625d94044aeb239d9eb9f7a7
+      internalID: -561650880
       vertices: []
       indices: 
       edges: []
@@ -1903,6 +2071,14 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Park_TileMap_Bush: -881986856
+      Park_TileMap_ChairHalf_1: -1965141751
+      Park_TileMap_ChairHalf_2: 1328775338
+      Park_TileMap_ChairHalf_3: 1146417831
+      Park_TileMap_ChairHalf_4: 336279584
+      Park_TileMap_ChairHalf_5: -2091710271
+      Park_TileMap_ChairHalf_6: -792247282
+      Park_TileMap_ChairHalf_7: -1811709520
+      Park_TileMap_ChairHalf_8: -561650880
       Park_TileMap_Chair_1: -1875856844
       Park_TileMap_Chair_2: 893723603
       Park_TileMap_Chair_3: 774931577
