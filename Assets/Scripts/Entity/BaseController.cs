@@ -67,38 +67,50 @@ public class BaseController : MonoBehaviour
         if (direction == Vector2.zero) return;
 
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        rightSprite.SetActive(false);
-        upSprite.SetActive(false);
-        downSprite.SetActive(false);
-
+        GameObject newActiveSprite = null;
         Animator selectedAnimator = null;
 
         if (Mathf.Abs(rotZ) <= 45f) // 오른쪽
         {
-            rightSprite.SetActive(true);
+            newActiveSprite = rightSprite;
             rightSprite.GetComponent<SpriteRenderer>().flipX = false;
             selectedAnimator = rightSprite.GetComponent<Animator>();
         }
         else if (Mathf.Abs(rotZ) > 135f) // 왼쪽
         {
-            rightSprite.SetActive(true);
+            newActiveSprite = rightSprite;
             rightSprite.GetComponent<SpriteRenderer>().flipX = true;
             selectedAnimator = rightSprite.GetComponent<Animator>();
         }
         else if (rotZ > 45f && rotZ < 135f) // 위쪽
         {
-            upSprite.SetActive(true);
+            newActiveSprite = upSprite;
             selectedAnimator = upSprite.GetComponent<Animator>();
         }
         else if (rotZ < -45f && rotZ > -135f) // 아래쪽
         {
-            downSprite.SetActive(true);
+            newActiveSprite = downSprite;
             selectedAnimator = downSprite.GetComponent<Animator>();
         }
 
-        
-        if (animationHandler.currentAnimator != selectedAnimator) // 같은 애니메이터일 경우 불필요한 호출 방지
+        // 이미 같은 스프라이트가 활성화 되어 있다면 상태를 유지하여 애니메이션 리셋 방지
+        if (animationHandler.currentAnimator != null && animationHandler.currentAnimator.gameObject == newActiveSprite)
+        {
+            // 오른쪽 스프라이트의 경우 flipX 값만 변경될 수 있으므로 업데이트해줄 수 있음
+            return;
+        }
+
+        // 방향이 바뀌었을 때에만 스프라이트 전환
+        rightSprite.SetActive(false);
+        upSprite.SetActive(false);
+        downSprite.SetActive(false);
+
+        if (newActiveSprite != null)
+        {
+            newActiveSprite.SetActive(true);
+        }
+
+        if (animationHandler.currentAnimator != selectedAnimator)
         {
             animationHandler.SetAnimator(selectedAnimator);
         }

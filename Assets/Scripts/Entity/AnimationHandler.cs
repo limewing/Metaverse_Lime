@@ -29,7 +29,14 @@ public class AnimationHandler : MonoBehaviour
 
     public void SetAnimator(Animator animator)
     {
-        if (animator == null || animator == currentAnimator) return; // 같은 애니메이터거나 null이면 변경하지 않음
+        if (animator == null) return;
+        if (animator == currentAnimator)
+        {
+            Debug.Log($"같은 Animator {animator.gameObject.name}이므로 변경하지 않음.");
+            return; // 같은 애니메이터라면 변경하지 않음
+        }
+
+        Debug.Log($"애니메이터 변경: {animator.gameObject.name}");
         currentAnimator = animator;
     }
 
@@ -44,5 +51,7 @@ public class AnimationHandler : MonoBehaviour
         bool isMovingState = obj.magnitude > 0.1f;
         Debug.Log($" {currentAnimator.gameObject.name} 애니메이션: IsMove = {isMovingState}");
         currentAnimator.SetBool(isMoving, isMovingState);
+        var stateInfo = currentAnimator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log($"현재 상태: {stateInfo.fullPathHash}, 진행률: {stateInfo.normalizedTime}");
     }
 }
