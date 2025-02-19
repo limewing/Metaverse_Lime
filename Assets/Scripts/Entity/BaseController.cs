@@ -18,9 +18,12 @@ public class BaseController : MonoBehaviour
 
     protected Vector2 lookDirection = Vector2.right;
 
+    protected AnimationHandler animationHandler;
+
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        animationHandler = GetComponent<AnimationHandler>();
     }
 
     protected virtual void Start()
@@ -46,12 +49,14 @@ public class BaseController : MonoBehaviour
 
     private void Movement(Vector2 direction)
     {
+        direction = direction * 5;
         if (direction != Vector2.zero)
         {
             lookDirection = direction.normalized; // 마지막 이동 방향을 보고있게 함
         }
 
-        _rigidbody.velocity = direction * 5;
+        _rigidbody.velocity = direction;
+        animationHandler.Move(direction);
     }
 
     private void Rotate(Vector2 direction)

@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : BaseController
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void HandleAction()
     {
-        
-    }
+        // 입력을 받으면 플레이어 이동
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        movementDirection = new Vector2(horizontal, vertical).normalized;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // 이동한 경우에만 lookDirection 갱신
+        if (movementDirection != Vector2.zero)
+        {
+            lookDirection = movementDirection;
+        }
     }
 }

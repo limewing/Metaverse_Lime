@@ -147,7 +147,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PlayerCharacter_RightIdle_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1152
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936047bfa2dd96b43bd854130ca0fdb0
+      internalID: 1879729328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightIdle_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1152
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8526047b422da245b4c700f3c95102c
+      internalID: -1988784829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightIdle_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1152
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfe3d9e408d56242afab8830b323f7c
+      internalID: 1133731904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightIdle_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1152
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268566d836c5bd847b8677e33aa30299
+      internalID: 35645929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightIdle_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1152
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a97c3c5531d8141ace97f79d21e8a1
+      internalID: 496309488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightIdle_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1152
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6658524ba84841e4ea8ad1ce0eb461b7
+      internalID: -1560510638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpIdle_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aba6e4a0a9155446bba4b3ea7e9853b
+      internalID: -1027112262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpIdle_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206b421349bd2c74989a05d91f2ecdad
+      internalID: -233315902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpIdle_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e9244f891f47741a296e3f74571570
+      internalID: -305109488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpIdle_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6faf239b4ffd04badb95a42e07eb3b
+      internalID: -240842645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpIdle_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f48d830389b4546bf25fcbfd90072d
+      internalID: -1008390395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpIdle_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a1a96b70dd71e4b8a4f54e8ac66ff6
+      internalID: 1888999702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownIdle_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0beb9ddbb42e07940b72a13466b61ef8
+      internalID: 1677115365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownIdle_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f9b116ab0b72044a967a56c7d8d1ff
+      internalID: 362379561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownIdle_3
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15555fddf7c1e1a4dbd62644be6ff8da
+      internalID: 1661117296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownIdle_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2aecd5bc5cfd8248a7bbcb232c8331c
+      internalID: -304291755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownIdle_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43576a4efbae7b1489ed6bfcfc4d6e85
+      internalID: 408905940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownIdle_6
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1152
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bf178a99ebdb64d8bf9e56ad723819
+      internalID: 251015888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightMove_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1088
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e76a3883478a0049ab17f87805f4109
+      internalID: 1711515643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightMove_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1088
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1141a9e4c0b3f642b1d364a6919b44a
+      internalID: 1211472403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightMove_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1088
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e32d92162d9f429bc624c8d8d4206
+      internalID: 1389794036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightMove_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1088
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dedc83e12697dd4eaa99b149e55c2a9
+      internalID: -1738224017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightMove_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1088
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3bff78354349a4ea20b4c2800caec6
+      internalID: 1497152723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_RightMove_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1088
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a5aa8cbafc9b242b610c216ba11fd7
+      internalID: 308247105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpMove_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a469b9df96865459ff8f38b7e3a54f
+      internalID: 321852829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpMove_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c05c12f63e15a4bbd1ce5011082337
+      internalID: -885230868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpMove_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee84ffedc62f8e541841bfe2181c73da
+      internalID: 412494870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpMove_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5d24d7fe78488439e2249eb33600bb
+      internalID: 1275801554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpMove_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01beff52180d410468494709fc529bc9
+      internalID: -1493577712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_UpMove_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c808e0a34526ea047b2e987235f2a340
+      internalID: 1439425344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownMove_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5919bc79c51dc47951d3119056178c
+      internalID: 2101947464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownMove_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8ab2e46b24f5c4db6fd5eb35d5ea03
+      internalID: 211184240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownMove_3
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245a40fa22c518e41934d73dbbd48788
+      internalID: 1035512782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownMove_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff05ee389a8efa479aa023182f55c1f
+      internalID: -419124962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownMove_5
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2b5e93fd605a04f892195fd0c4fca1
+      internalID: -908463226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCharacter_DownMove_6
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1088
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fda79b472fbf4141b35c50cb7234920
+      internalID: -1973614367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +914,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PlayerCharacter_DownIdle_1: 1677115365
+      PlayerCharacter_DownIdle_2: 362379561
+      PlayerCharacter_DownIdle_3: 1661117296
+      PlayerCharacter_DownIdle_4: -304291755
+      PlayerCharacter_DownIdle_5: 408905940
+      PlayerCharacter_DownIdle_6: 251015888
+      PlayerCharacter_DownMove_1: 2101947464
+      PlayerCharacter_DownMove_2: 211184240
+      PlayerCharacter_DownMove_3: 1035512782
+      PlayerCharacter_DownMove_4: -419124962
+      PlayerCharacter_DownMove_5: -908463226
+      PlayerCharacter_DownMove_6: -1973614367
+      PlayerCharacter_RightIdle_1: 1879729328
+      PlayerCharacter_RightIdle_2: -1988784829
+      PlayerCharacter_RightIdle_3: 1133731904
+      PlayerCharacter_RightIdle_4: 35645929
+      PlayerCharacter_RightIdle_5: 496309488
+      PlayerCharacter_RightIdle_6: -1560510638
+      PlayerCharacter_RightMove_1: 1711515643
+      PlayerCharacter_RightMove_2: 1211472403
+      PlayerCharacter_RightMove_3: 1389794036
+      PlayerCharacter_RightMove_4: -1738224017
+      PlayerCharacter_RightMove_5: 1497152723
+      PlayerCharacter_RightMove_6: 308247105
+      PlayerCharacter_UpIdle_1: -1027112262
+      PlayerCharacter_UpIdle_2: -233315902
+      PlayerCharacter_UpIdle_3: -305109488
+      PlayerCharacter_UpIdle_4: -240842645
+      PlayerCharacter_UpIdle_5: -1008390395
+      PlayerCharacter_UpIdle_6: 1888999702
+      PlayerCharacter_UpMove_1: 321852829
+      PlayerCharacter_UpMove_2: -885230868
+      PlayerCharacter_UpMove_3: 412494870
+      PlayerCharacter_UpMove_4: 1275801554
+      PlayerCharacter_UpMove_5: -1493577712
+      PlayerCharacter_UpMove_6: 1439425344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
