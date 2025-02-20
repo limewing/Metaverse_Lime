@@ -49,9 +49,6 @@ public class AnimationHandler : MonoBehaviour
         }
 
         bool isMovingState = obj.magnitude > 0.1f;
-        Debug.Log($" {currentAnimator.gameObject.name} 애니메이션: IsMove = {isMovingState}");
         currentAnimator.SetBool(isMoving, isMovingState);
-        var stateInfo = currentAnimator.GetCurrentAnimatorStateInfo(0);
-        Debug.Log($"현재 상태: {stateInfo.fullPathHash}, 진행률: {stateInfo.normalizedTime}");
     }
 }

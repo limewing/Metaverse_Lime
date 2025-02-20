@@ -6,13 +6,11 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(Camera))]
 public class CaneraFollow : MonoBehaviour
 {
-    [Header("Target to follow")]
     public Transform target;          // 따라갈 대상(플레이어 등)
     public Vector3 offset;           // 카메라 오프셋
     public float smoothSpeed = 0.125f; // 부드러운 이동 속도
 
-    [Header("Tilemap Collider (경계 제한)")]
-    public TilemapCollider2D tilemapCollider; // 맵의 TilemapCollider2D 할당
+    public TilemapCollider2D tilemapCollider;
 
     private Camera cam;
     private float camHalfHeight;
@@ -34,8 +32,12 @@ public class CaneraFollow : MonoBehaviour
         if (tilemapCollider != null)
         {
             Bounds bounds = tilemapCollider.bounds;
-            minBoundary = bounds.min;  // (xMin, yMin)
-            maxBoundary = bounds.max;  // (xMax, yMax)
+
+            Vector3 adjustedMin = new Vector3(bounds.min.x + 1.0f, bounds.min.y + 1.0f);
+            Vector3 adjustedMax = new Vector3(bounds.max.x - 1.0f, bounds.max.y - 1.0f);
+
+            minBoundary = adjustedMin;
+            maxBoundary = adjustedMax;
         }
     }
 
