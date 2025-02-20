@@ -6,7 +6,7 @@ public class TheStack : MonoBehaviour
 {
     private const float BoundSize = 3.5f;
     private const float MovingBoundsSize = 3f;
-    private const float StackMovingSpeed = 5.0f;
+    private const float StackMovingSpeed = 4.0f;
     private const float BlockMovingSpeed = 3.5f;
     private const float ErrorMargin = 0.1f;
 
@@ -30,7 +30,6 @@ public class TheStack : MonoBehaviour
 
     public Color prevColor;
     public Color nextColor;
-
 
     int bestScore = 0;
     public int BestScore { get => bestScore; }
@@ -57,7 +56,7 @@ public class TheStack : MonoBehaviour
         bestScore = PlayerPrefs.GetInt(BestScoreKey, 0);
         bestCombo = PlayerPrefs.GetInt(BestComboKey, 0);
 
-        prevBlockPosition = Vector3.down;
+        prevBlockPosition = Vector3.zero;
         Spawn_Block();
     }
 
@@ -66,6 +65,7 @@ public class TheStack : MonoBehaviour
         if (isGameOver)
             return;
 
+        // 클릭 시 PlaceBlock() → 성공하면 다음 블록 스폰
         if (Input.GetMouseButtonDown(0))
         {
             if (PlaceBlock())
@@ -79,24 +79,26 @@ public class TheStack : MonoBehaviour
                 UpdateScore();
                 isGameOver = true;
                 GameOverEffect();
-                UIManager.Instance.SetScoreUI();
+                StackUIManager.Instance.SetScoreUI();
             }
         }
 
         MoveBlock();
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, StackMovingSpeed * Time.deltaTime);
+
+        transform.position = Vector3.Lerp(
+            transform.position,
+            desiredPosition,
+            StackMovingSpeed * Time.deltaTime
+        );
     }
 
     bool Spawn_Block()
     {
-        // 이전블럭 저장
+        // 이전 블록 위치 저장
         if (lastBlock != null)
             prevBlockPosition = lastBlock.localPosition;
 
-        GameObject newBlock = null;
-        Transform newTrans = null;
-
-        newBlock = Instantiate(originBlock);
+        GameObject newBlock = Instantiate(originBlock);
 
         if (newBlock == null)
         {
@@ -104,13 +106,14 @@ public class TheStack : MonoBehaviour
             return false;
         }
 
+        // 스프라이트가 없으면 런타임으로 생성
         ColorChange(newBlock);
 
-        newTrans = newBlock.transform;
+        Transform newTrans = newBlock.transform;
         newTrans.parent = this.transform;
-        newTrans.localPosition = prevBlockPosition + Vector3.up;
+        newTrans.localPosition = prevBlockPosition + Vector3.up * 0.02f;
         newTrans.localRotation = Quaternion.identity;
-        newTrans.localScale = new Vector3(stackBounds.x, 1, 1);
+        newTrans.localScale = new Vector3(stackBounds.x * 10f, 10f, 1);
 
         stackCount++;
 
@@ -119,7 +122,7 @@ public class TheStack : MonoBehaviour
 
         lastBlock = newTrans;
 
-        UIManager.Instance.UpdateScore();
+        StackUIManager.Instance.UpdateScore();
         return true;
     }
 
@@ -144,10 +147,21 @@ public class TheStack : MonoBehaviour
             return;
         }
 
-        rn.material.color = applyColor;
+        // 기본 스프라이트 생성
+        if (rn.sprite == null)
+        {
+            rn.sprite = Sprite.Create(
+                Texture2D.whiteTexture,
+                new Rect(0, 0, Texture2D.whiteTexture.width, Texture2D.whiteTexture.height),
+                new Vector2(0.5f, 0.5f)
+            );
+        }
+
+        // SpriteRenderer의 색상으로 블록 색상 적용
+        rn.color = applyColor;
         Camera.main.backgroundColor = applyColor - new Color(0.1f, 0.1f, 0.1f);
 
-        if (applyColor.Equals(nextColor) == true)
+        if (applyColor.Equals(nextColor))
         {
             prevColor = nextColor;
             nextColor = GetRandomColor();
@@ -166,7 +180,6 @@ public class TheStack : MonoBehaviour
         Vector3 lastPosition = lastBlock.transform.localPosition;
         float deltaX = Mathf.Abs(prevBlockPosition.x - lastPosition.x);
 
-
         if (deltaX > ErrorMargin)
         {
             stackBounds.x -= deltaX;
@@ -174,7 +187,7 @@ public class TheStack : MonoBehaviour
                 return false;
 
             float middle = (prevBlockPosition.x + lastPosition.x) / 2;
-            lastBlock.localScale = new Vector3(stackBounds.x, 1, 1);
+            lastBlock.localScale = new Vector3(stackBounds.x * 10f, 10f, 1);
 
             Vector3 tempPosition = lastBlock.localPosition;
             tempPosition.x = middle;
@@ -196,18 +209,16 @@ public class TheStack : MonoBehaviour
         else
         {
             ComboCheck();
-            lastBlock.localPosition = prevBlockPosition + Vector3.up;
+            lastBlock.localPosition = prevBlockPosition + Vector3.up * 0.02f;
         }
 
         return true;
-
     }
 
     void CreateRubble(Vector3 pos, Vector3 scale)
     {
         GameObject go = Instantiate(lastBlock.gameObject);
         go.transform.parent = this.transform;
-
         go.transform.localPosition = pos;
         go.transform.localScale = scale;
         go.transform.localRotation = Quaternion.identity;
@@ -227,8 +238,7 @@ public class TheStack : MonoBehaviour
         {
             Debug.Log("5Combo Success!");
             stackBounds += new Vector3(0.5f, 0);
-            stackBounds.x =
-                (stackBounds.x > BoundSize) ? BoundSize : stackBounds.x;
+            stackBounds.x = (stackBounds.x > BoundSize) ? BoundSize : stackBounds.x;
         }
     }
 
@@ -254,14 +264,11 @@ public class TheStack : MonoBehaviour
             if (childCount < i)
                 break;
 
-            GameObject go =
-                this.transform.GetChild(childCount - i).gameObject;
-
+            GameObject go = this.transform.GetChild(childCount - i).gameObject;
             if (go.name.Equals("Rubble"))
                 continue;
 
             Rigidbody2D rigid = go.AddComponent<Rigidbody2D>();
-
             rigid.AddForce(
                 (Vector2.up * Random.Range(0, 10f)
                  + Vector2.right * (Random.Range(0, 10f) - 5f))
@@ -273,7 +280,6 @@ public class TheStack : MonoBehaviour
     public void Restart()
     {
         int childCount = transform.childCount;
-
         for (int i = 0; i < childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);
@@ -291,7 +297,7 @@ public class TheStack : MonoBehaviour
         comboCount = 0;
         maxCombo = 0;
 
-        prevBlockPosition = Vector3.down;
+        prevBlockPosition = Vector3.zero;
 
         prevColor = GetRandomColor();
         nextColor = GetRandomColor();

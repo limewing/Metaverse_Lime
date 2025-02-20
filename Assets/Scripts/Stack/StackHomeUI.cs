@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HomeUI : BaseUI
+public class StackHomeUI : StackBaseUI
 {
     Button startButton;
     Button exitButton;
@@ -13,9 +13,9 @@ public class HomeUI : BaseUI
         return UIState.Home;
     }
 
-    public override void Init(UIManager uiManager)
+    public override void Init(StackUIManager stackuiManager)
     {
-        base.Init(uiManager);
+        base.Init(stackuiManager);
 
         startButton = transform.Find("StartButton").GetComponent<Button>();
         exitButton = transform.Find("ExitButton").GetComponent<Button>();
@@ -26,12 +26,12 @@ public class HomeUI : BaseUI
 
     void OnClickStartButton()
     {
-        uiManager.OnClickStart();
+        stackuiManager.OnClickStart();
     }
 
     void OnClickExitButton()
     {
-        uiManager.OnClickExit();
+        stackuiManager.OnClickExit();
     }
 
 

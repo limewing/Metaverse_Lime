@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyZone : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.Equals("Rubble"))
             Destroy(collision.gameObject);

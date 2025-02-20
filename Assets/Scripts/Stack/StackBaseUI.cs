@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEditor.Timeline;
 using UnityEngine;
 
-public abstract class BaseUI : MonoBehaviour
+public abstract class StackBaseUI : MonoBehaviour
 {
-    protected UIManager uiManager;
+    protected StackUIManager stackuiManager;
 
-    public virtual void Init(UIManager uiManager)
+    public virtual void Init(StackUIManager stackuiManager)
     {
-        this.uiManager = uiManager;
+        this.stackuiManager = stackuiManager;
     }
 
     protected abstract UIState GetUIState();

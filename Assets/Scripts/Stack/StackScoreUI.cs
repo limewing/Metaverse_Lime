@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreUI : BaseUI
+public class StackScoreUI : StackBaseUI
 {
     TextMeshProUGUI scoreText;
     TextMeshProUGUI comboText;
@@ -18,9 +18,9 @@ public class ScoreUI : BaseUI
         return UIState.Score;
     }
 
-    public override void Init(UIManager uiManager)
+    public override void Init(StackUIManager stackuiManager)
     {
-        base.Init(uiManager);
+        base.Init(stackuiManager);
 
         scoreText = transform.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         comboText = transform.Find("ComboText").GetComponent<TextMeshProUGUI>();
@@ -44,11 +44,11 @@ public class ScoreUI : BaseUI
 
     void onClickStartButton()
     {
-        uiManager.OnClickStart();
+        stackuiManager.OnClickStart();
     }
 
     void onClickExitButton()
     {
-        uiManager.OnClickExit();
+        stackuiManager.OnClickExit();
     }
 }
