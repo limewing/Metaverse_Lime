@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,19 +19,24 @@ public class MainUIManager : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
 
     [SerializeField] private GameObject miniGamePanel;
-    [SerializeField] private Text miniGameNameText;
+    [SerializeField] private Image miniGameBackImage;
+    [SerializeField] private TMP_Text miniGameNameText;
     [SerializeField] private Image miniGameImage;
-    [SerializeField] private Text bestScoreText;
+    [SerializeField] private TMP_Text bestScoreText;
 
     private void Awake()
     {
+        Debug.Log("MainUIManager Awake() 호출됨");
+
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("MainUIManager Instance가 정상적으로 할당됨");
         }
         else
         {
+            Debug.LogError("MainUIManager 중복 생성 방지.");
             Destroy(gameObject);
             return;
         }
@@ -41,6 +47,11 @@ public class MainUIManager : MonoBehaviour
             Debug.LogError("MainUIManager에 DialoguePanel이 설정되지 않았습니다");
         }
 
+    }
+
+    public static void CheckInstance()
+    {
+        Debug.Log($"MainUIManager.Instance 상태 확인: {(Instance == null ? "NULL" : "정상")}");
     }
 
     public void ShowDialogue(string npcName, string dialogue)
@@ -56,12 +67,17 @@ public class MainUIManager : MonoBehaviour
         dialoguePanel.SetActive(false);
     }
 
-    public void ShowMiniGameInfo(string gameName, Sprite gameImage, int bestScore)
+    public void ShowMiniGameInfo(Sprite backImage,string gameName, Sprite gameImage, int bestScore)
     {
         miniGamePanel.SetActive(true);
         miniGameNameText.text = gameName;
         miniGameImage.sprite = gameImage;
+        miniGameBackImage.sprite = backImage;
         bestScoreText.text = $"최고 기록: {bestScore}";
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            SceneManager.LoadScene("FlappyScene");
+        }
     }
 
     public void HideMiniGameInfo()

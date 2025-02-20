@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : BaseController
 {
     private bool isTalking = false;
+
+    
     protected override void HandleAction()
     {
         if (isTalking) return;
@@ -19,6 +21,7 @@ public class PlayerController : BaseController
         {
             lookDirection = movementDirection;
         }
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (MainUIManager.Instance.IsDialogueActive())
@@ -40,10 +43,6 @@ public class PlayerController : BaseController
                     activeNPC.EndConversation();
                 }
             }
-        }
-        else
-        {
-            Debug.LogError("MainUIManager.Instance가 null입니다. MainUIManager가 제대로 할당되었는지 확인하세요.");
         }
     }
 

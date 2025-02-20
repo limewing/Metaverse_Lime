@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: lime
   dialogues:
+  - Hellooooo
   - Lets Play GAMEEEEEE!!!!!!!!!!!
   miniGameName: '"Stack"'
   miniGameImage: {fileID: 0}
+  miniGameBackImage: {fileID: 21300000, guid: ac2d81f778cfdae4196f031ed1f35892, type: 3}
   bestScore: 10

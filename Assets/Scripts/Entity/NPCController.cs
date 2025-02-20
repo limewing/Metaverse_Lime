@@ -19,12 +19,23 @@ public class NPCController : BaseController
 
     private void Update()
     {
-        if (isTalking) return; // 대화 중일 땐 상호작용 불가
-
-        if (isPlayerNear && Input.GetKeyDown(KeyCode.Z))
+        if (isPlayerNear)
         {
-            Debug.Log("Z 키 입력 감지됨! 대화 시작");
-            StartConversation();
+            if (!isTalking && Input.GetKeyDown(KeyCode.Z))
+            {
+                Debug.Log("Z 키 입력 감지됨! 대화 시작");
+                StartConversation();
+            }
+            else if (isTalking && Input.GetKeyDown(KeyCode.Z))
+            {
+                Debug.Log("Z 키 입력 감지됨! 대화 계속");
+                ContinueConversation();
+            }
+            else if (isTalking && Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("X 키 입력 감지됨! 대화 종료");
+                EndConversation();
+            }
         }
     }
 
@@ -67,13 +78,14 @@ public class NPCController : BaseController
             EndConversation();
             return;
         }
-
-        MainUIManager.Instance.ShowMiniGameInfo(dialogueData.miniGameName, dialogueData.miniGameImage, dialogueData.bestScore);
+        Debug.Log($"미니게임 정보 표시: {dialogueData.miniGameName} / 최고 점수: {dialogueData.bestScore}");
+        MainUIManager.Instance.ShowMiniGameInfo(dialogueData.miniGameBackImage ,dialogueData.miniGameName, dialogueData.miniGameImage, dialogueData.bestScore);
     }
 
-    private void EndConversation()
+    public void EndConversation()
     {
         isTalking = false;
+        MainUIManager.Instance.HideMiniGameInfo();
         lookDirection = Vector2.down; // 다시 아래를 바라보도록 설정
         Rotate(lookDirection);
         MainUIManager.Instance.HideDialogue();

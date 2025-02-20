@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Orange
   dialogues:
-  - Hi! Wanna  Play Game?
+  - Hi!
+  - Wanna  Play Flappy?
   miniGameName: '"Flappy"'
   miniGameImage: {fileID: 21300000, guid: fb18505aad345a0499d3d81c90d604b7, type: 3}
+  miniGameBackImage: {fileID: 21300000, guid: ac2d81f778cfdae4196f031ed1f35892, type: 3}
   bestScore: 10
