@@ -67,17 +67,16 @@ public class MainUIManager : MonoBehaviour
         dialoguePanel.SetActive(false);
     }
 
-    public void ShowMiniGameInfo(Sprite backImage,string gameName, Sprite gameImage, int bestScore)
+    public void ShowMiniGameInfo(Sprite backImage,string gameName, Sprite gameImage)
     {
         miniGamePanel.SetActive(true);
         miniGameNameText.text = gameName;
         miniGameImage.sprite = gameImage;
         miniGameBackImage.sprite = backImage;
-        bestScoreText.text = $"최고 기록: {bestScore}";
+        int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        bestScoreText.text = "Best: " + bestScore.ToString();
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            PlayerPrefs.SetInt("FlappyBestScore", bestScore);
-            SceneManager.LoadScene("FlappyScene");
             SceneManager.LoadScene("FlappyScene");
         }
     }

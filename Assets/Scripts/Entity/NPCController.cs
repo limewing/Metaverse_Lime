@@ -79,7 +79,7 @@ public class NPCController : BaseController
             return;
         }
         Debug.Log($"미니게임 정보 표시: {dialogueData.miniGameName} / 최고 점수: {dialogueData.bestScore}");
-        MainUIManager.Instance.ShowMiniGameInfo(dialogueData.miniGameBackImage ,dialogueData.miniGameName, dialogueData.miniGameImage, dialogueData.bestScore);
+        MainUIManager.Instance.ShowMiniGameInfo(dialogueData.miniGameBackImage ,dialogueData.miniGameName, dialogueData.miniGameImage);
     }
 
     public void EndConversation()
