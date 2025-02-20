@@ -9,14 +9,17 @@ public class FlappyManager : MonoBehaviour
     public static FlappyManager Instance { get { return flappyManager; } }
 
     private int currentScore = 0;
+    private bool isGameOver = false;
+    private int currentBest = 0;
 
-    UIManager uiManager;
-    public UIManager UIManager { get { return uiManager; } }
+    FlappyUIManager uiManager;
+    public FlappyUIManager UIManager { get { return uiManager; } }
 
     private void Awake()
     {
         flappyManager = this;
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<FlappyUIManager>();
+        currentBest = PlayerPrefs.GetInt("BestScore", 0);
     }
 
     private void Start()
@@ -24,10 +27,26 @@ public class FlappyManager : MonoBehaviour
         uiManager.UpdateScore(0);
     }
 
+    void Update()
+    {
+        if (isGameOver)
+        {
+            uiManager.SetRestart();
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                RestartGame();
+            }
+        }
+    }
+
     public void GameOver()
     {
         Debug.Log("Game Over");
-        uiManager.SetRestart();
+        isGameOver = true;
     }
 
     public void RestartGame()
@@ -40,6 +59,12 @@ public class FlappyManager : MonoBehaviour
         currentScore += score;
         Debug.Log("Score: " + currentScore);
         uiManager.UpdateScore(currentScore);
+
+        if (currentScore > currentBest)
+        {
+            PlayerPrefs.SetInt("BestScore", currentScore);
+            PlayerPrefs.Save(); // 즉시 저장하여 앱 종료 후에도 유지되게 함
+        }
     }
 
 }

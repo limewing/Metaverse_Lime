@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class FlappyUIManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
+    
     public TextMeshProUGUI restartText;
+
+    [SerializeField] private TMP_Text scoreText; 
+    [SerializeField] private TMP_Text bestScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +28,12 @@ public class UIManager : MonoBehaviour
         restartText.gameObject.SetActive(true);
     }
 
-    public void UpdateScore(int score)
+    public void UpdateScore(int currentScore)
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + currentScore.ToString();
+
+        // PlayerPrefs에 저장된 BestScore 값을 읽어와 업데이트
+        int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        bestScoreText.text = "Best: " + bestScore.ToString();
     }
 }

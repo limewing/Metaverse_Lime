@@ -76,6 +76,8 @@ public class MainUIManager : MonoBehaviour
         bestScoreText.text = $"최고 기록: {bestScore}";
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            PlayerPrefs.SetInt("FlappyBestScore", bestScore);
+            SceneManager.LoadScene("FlappyScene");
             SceneManager.LoadScene("FlappyScene");
         }
     }
