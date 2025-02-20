@@ -62,7 +62,7 @@ public class BaseController : MonoBehaviour
         animationHandler.Move(direction);
     }
 
-    private void Rotate(Vector2 direction)
+    protected void Rotate(Vector2 direction)
     {
         if (direction == Vector2.zero) return;
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
@@ -45,6 +46,11 @@ public class AnimationHandler : MonoBehaviour
         if (currentAnimator == null)
         {
             Debug.LogError("No Animator Activated.");
+            return;
+        }
+
+        if (!currentAnimator.parameters.Any(p => p.name == "IsMove"))
+        {
             return;
         }
 
