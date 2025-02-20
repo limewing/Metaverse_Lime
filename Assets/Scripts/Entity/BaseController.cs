@@ -67,27 +67,28 @@ public class BaseController : MonoBehaviour
         if (direction == Vector2.zero) return;
 
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (rotZ < 0) rotZ += 360;
         GameObject newActiveSprite = null;
         Animator selectedAnimator = null;
 
-        if (Mathf.Abs(rotZ) <= 45f) // 오른쪽
+        if (rotZ >= 315 || rotZ < 45) // 오른쪽
         {
             newActiveSprite = rightSprite;
             rightSprite.GetComponent<SpriteRenderer>().flipX = false;
             selectedAnimator = rightSprite.GetComponent<Animator>();
         }
-        else if (Mathf.Abs(rotZ) > 135f) // 왼쪽
+        else if (rotZ >= 135 && rotZ < 225) // 왼쪽
         {
             newActiveSprite = rightSprite;
             rightSprite.GetComponent<SpriteRenderer>().flipX = true;
             selectedAnimator = rightSprite.GetComponent<Animator>();
         }
-        else if (rotZ > 45f && rotZ < 135f) // 위쪽
+        else if (rotZ >= 45 && rotZ < 135) // 위쪽
         {
             newActiveSprite = upSprite;
             selectedAnimator = upSprite.GetComponent<Animator>();
         }
-        else if (rotZ < -45f && rotZ > -135f) // 아래쪽
+        else if (rotZ >= 225 && rotZ < 315) // 아래쪽
         {
             newActiveSprite = downSprite;
             selectedAnimator = downSprite.GetComponent<Animator>();
